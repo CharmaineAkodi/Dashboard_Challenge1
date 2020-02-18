@@ -1,0 +1,31 @@
+html {
+	box-sizing: border-box;
+}
+*, 
+*:before,
+*:after{
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+/**********FONTS*************/
+@font-face {
+	font-family: 
+	src:;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+.menuItems > li {
+	padding: 10px;
+	list-style: none;
+}
+
+
+.sidebar {
+	background-color: #212121;
+}

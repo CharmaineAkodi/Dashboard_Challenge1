@@ -1,0 +1,6 @@
+/**********MOBILE*************/
+
+.menuItems {
+	display: flex;
+	justify-content: space-around;
+}

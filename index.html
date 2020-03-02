@@ -5,10 +5,111 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Dashboard SpaceX</title>
 		<link rel="stylesheet" type="text/css" href="styles/main.css">
-		<link rel="stylesheet" type="text/css" href="styles/grid-layout.css">
-		<script type="text/javascript" src="scripts/menu.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+		<!--<script type="text/javascript" src="scripts/main.js"></script>-->
 	</head>
 	<body>
 
+		<nav class="navbar">
+			<ul class="menuItems">
+				<img class="spaceLogo" src="images/spacex.png" />
+				<li class="navItem">
+					<a href="#" class="navLink">
+					<img src="images/home.svg" />
+					<span class="linkText">Home</span>
+					</a>
+				</li>
+				<li class="navItem">
+					<a href="#" class="navLink">
+					<img src="images/battery.svg" />
+					<span class="linkText">Power</span>
+					</a>
+				</li>
+				<li class="navItem">
+					<a href="#" class="navLink">
+					<img src="images/list.svg" />
+					<span class="linkText">Supply</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+
+		<main>
+
+			<div class="fuelChart">
+				<canvas id="fuelChart" width="400" height="400"></canvas>
+				<script>
+					var ctx = document.getElementById('fuelChart').getContext('2d');
+					var myDoughnutChart = new Chart(ctx, {
+    					type: 'doughnut',
+    					data: data,
+    					options: options
+    					datasets: [{
+    					label: 'Fuel',
+    					]
+					});
+				</script>
+			</div>
+
+			<div class="distanceChart">
+				<canvas id="distanceChart" width="400" height="400"></canvas>
+				<script>
+					var ctx = document.getElementById('distanceChart').getContext('2d');
+					var myLineChart = new Chart(ctx, {
+    					type: 'line',
+    					data: data,
+    					options: options
+    					datasets: [{
+    					label: 'Distance over time',
+    					]
+					});
+				</script>	
+			</div>
+
+			<div class="supplyChart">
+  				<canvas id="supplyChart" width="400" height="400"></canvas>
+				<script>
+					var ctx = document.getElementById('supplyChart').getContext('2d');
+					var myChart = new Chart(ctx, {
+    				type: 'bar',
+   					data: {
+        			labels: ['Bread', 'Greens', 'Meat', 'Rice', 'Fruit'],
+        			datasets: [{
+            		label: 'Percentage of food left',
+            		data: [17, 19, 15,12,15],
+            		backgroundColor: [
+               		 	'rgb(204, 220, 231)',
+                		'rgb(204, 220, 231)',
+                		'rgb(204, 220, 231)',
+                		'rgb(204, 220, 231)',
+                		'rgb(204, 220, 231)'
+            		],
+            		borderColor: [
+                		'rgb(0, 82, 136)',
+                		'rgb(0, 82, 136)',
+                		'rgb(0, 82, 136)',
+                		'rgb(0, 82, 136)',
+                		'rgb(0, 82, 136)'
+            		],
+            		borderWidth: 1
+        			}]
+    				},
+    				options: {
+        				scales: {
+            				yAxes: [{
+                				ticks: {
+                    				beginAtZero: true
+                				}
+            				}]
+        				}
+    				}
+					});
+				</script>
+			</div>
+
+			<div>
+				
+			</div>
+		</main>
 	</body>
 </html>

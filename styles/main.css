@@ -1,0 +1,109 @@
+:root {
+	font-family: 'Arial';
+	font-size: 16px;
+}
+
+body {
+	color: ;
+	background-color: ;
+	margin: 0;
+	padding: 0;
+}
+
+main {
+	margin-top: 3rem;
+}
+
+.navbar {
+	top: 0;
+	width: 100%;
+	height: 2.5rem;
+	position: fixed;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	box-shadow: 1px 1px 1px 1px #E2E2E2;
+}
+
+.menuItems {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.navLink {
+	display: flex;
+	align-items: center;
+	height: 3rem;
+	text-decoration: none;
+}
+
+.linkText {
+	display: none;
+	color: #111111;
+}
+
+.navItem img {
+	width: 2rem;
+	min-width: 2rem;
+	margin: 0 1.5rem;
+	display: none;
+}
+
+.spaceLogo {
+	width: 50%;
+	height: 50%;
+	margin-left: -9rem;
+	padding-top: 0.5rem;
+}
+
+/***********TABLET*************/
+@media only screen and (min-width: 768px) {
+	.menuItems {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.navbar {
+		width: 5rem;
+		height: 100%;
+		position: fixed;
+		background-color: white;
+		border-top-right-radius: 10px;
+		border-bottom-right-radius: 10px;
+		box-shadow: 1px 1px 1px 1px #E2E2E2;
+		transition: width 200ms ease;
+	}
+
+	.navbar:hover {
+		width: 16rem;
+	}
+
+	.navbar:hover .linkText {
+		display: block;
+	}
+
+	main {
+		margin-left: 5rem;
+		padding: 1rem;
+	}
+
+	.navItem img {
+		display: block;
+	}
+}
+
+/***********LAPTOP*************/
+@media only screen and (min-width: 1024px) {
+	
+}
+
+/****************DESKTOP******************/
+@media only screen and (min-width: 1440px) {
+
+}

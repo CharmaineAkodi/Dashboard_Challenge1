@@ -1,0 +1,11 @@
+/**********MOBILE*************/
+
+.menuItems {
+	display: flex;
+	justify-content: space-around;
+}
+
+.speed {
+	border: 1px solid black;
+	border-radius: 10px;
+}

@@ -5,12 +5,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Dashboard SpaceX</title>
 		<link rel="stylesheet" type="text/css" href="styles/main.css">
-		<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+		<link rel="stylesheet" type="text/css" href="styles/grid-layout.css">
 		<!--<script type="text/javascript" src="scripts/main.js"></script>-->
 	</head>
-	<body>
+	<body class="grid-container">
 
-		<nav class="navbar">
+		<nav class="grid-item navbar">
 			<ul class="menuItems">
 				<img class="spaceLogo" src="images/spacex.png" />
 				<li class="navItem">
@@ -33,83 +33,37 @@
 				</li>
 			</ul>
 		</nav>
-
-		<main>
-
-			<div class="fuelChart">
-				<canvas id="fuelChart" width="400" height="400"></canvas>
-				<script>
-					var ctx = document.getElementById('fuelChart').getContext('2d');
-					var myDoughnutChart = new Chart(ctx, {
-    					type: 'doughnut',
-    					data: data,
-    					options: options
-    					datasets: [{
-    					label: 'Fuel',
-    					]
-					});
-				</script>
+		<br>
+		<section>
+			<div class="grid-item speed">
+				<h3>SPEED</h3>
+				<p>28</p>
 			</div>
-
-			<div class="distanceChart">
-				<canvas id="distanceChart" width="400" height="400"></canvas>
-				<script>
-					var ctx = document.getElementById('distanceChart').getContext('2d');
-					var myLineChart = new Chart(ctx, {
-    					type: 'line',
-    					data: data,
-    					options: options
-    					datasets: [{
-    					label: 'Distance over time',
-    					]
-					});
-				</script>	
+			<br>
+			<div class="grid-item gforce">
+				<h3>G-FORCE</h3>
+				<p>75G</p>
 			</div>
-
-			<div class="supplyChart">
-  				<canvas id="supplyChart" width="400" height="400"></canvas>
-				<script>
-					var ctx = document.getElementById('supplyChart').getContext('2d');
-					var myChart = new Chart(ctx, {
-    				type: 'bar',
-   					data: {
-        			labels: ['Bread', 'Greens', 'Meat', 'Rice', 'Fruit'],
-        			datasets: [{
-            		label: 'Percentage of food left',
-            		data: [17, 19, 15,12,15],
-            		backgroundColor: [
-               		 	'rgb(204, 220, 231)',
-                		'rgb(204, 220, 231)',
-                		'rgb(204, 220, 231)',
-                		'rgb(204, 220, 231)',
-                		'rgb(204, 220, 231)'
-            		],
-            		borderColor: [
-                		'rgb(0, 82, 136)',
-                		'rgb(0, 82, 136)',
-                		'rgb(0, 82, 136)',
-                		'rgb(0, 82, 136)',
-                		'rgb(0, 82, 136)'
-            		],
-            		borderWidth: 1
-        			}]
-    				},
-    				options: {
-        				scales: {
-            				yAxes: [{
-                				ticks: {
-                    				beginAtZero: true
-                				}
-            				}]
-        				}
-    				}
-					});
-				</script>
+		</section>
+		<br>
+		<section class="grid-item charts">
+			<div class="grid-item fuelChart">
+				<canvas id="fuelChart"></canvas>
+				<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+				<script type="text/javascript" src="scripts/charts.js"></script>
 			</div>
-
-			<div>
-				
+			<br>
+			<div class=" grid-item distanceChart">
+				<canvas id="distanceChart"></canvas>
+				<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+				<script type="text/javascript" src="scripts/charts.js"></script>
 			</div>
-		</main>
+			<br>
+			<div class="grid-item supplyChart">
+  				<canvas id="supplyChart"></canvas>
+				<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+				<script type="text/javascript" src="scripts/charts.js"></script>
+			</div>
+		</section>
 	</body>
 </html>

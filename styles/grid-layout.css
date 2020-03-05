@@ -1,41 +1,169 @@
-/**********MOBILE*************/
-.grid-container {
-	display: grid;
-	width: 100%;
-	max-width: 750px;
+.wrapper {
+	max-width: 690px;
 	margin: 0 auto;
-	grid-template-columns: repeat(1,1fr);
-
-	grid-template-areas: 	"menu"
-							"section1"
-							"section2"
-							"chart1"
-							"chart2"
-							"chart3"
-							"foot"
-
 }
 
-.navbar {
-	grid-area: menu;
+.information {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	/*grid-gap: 50px;
+	grid-template-columns: 1fr;
+	width: 100%;
+	grid-template-areas: 	"speed"	
+							"gforce"	
+							"passengers";*/
+	}
+	.speed {
+		height: 200px;
+		text-align: center;
+		padding: 20px;
+		padding-top: 40px;
+		width: 90%
+	}
+
+	.gforce {
+		height: 200px;
+		text-align: center;
+		padding: 20px;
+		padding-top: 40px;
+		width: 100%
+	}
+
+	.passengers {
+	
+		height: 200px;
+		text-align: center;
+		padding: 20px;
+		padding-top: 40px;
+		width: 100%
+	}
+
+.charts {
+	display: grid;
+	grid-gap: 20px; 
+	align-items: center;
 }
 
-.speed {
-	grid-area: section1;
+.fuelChart, .distanceChart, .supplyChart {
+	width: 100%;
+    height: 500px;
+}
+/********TABLET********/
+@media only screen and (min-width: 700px) {
+	.wrapper {
+		max-width: 800px;
+	} 
+	.information {
+		display: grid;
+		grid-row-gap: 15px;
+		grid-template-columns: repeat(2,1fr);
+		width: 100%;
+		grid-template-areas: 	"speed		speed"	
+								"gforce		passengers"	
+								"gforce		passengers";
+	}
+	.speed {
+		grid-area: speed;
+		height: 200px;
+		text-align: center;
+		padding: 20px;
+		padding-top: 40px;
+		width: 90%
+	}
+
+	.gforce {
+		grid-area: gforce;
+		height: 200px;
+		text-align: center;
+		padding: 20px;
+		padding-top: 40px;
+		width: 80%;
+	}
+
+	.passengers {
+		grid-area: passengers;
+		height: 200px;
+		text-align: center;
+		padding: 20px;
+		padding-top: 40px;
+		width: 80%;
+	}
+	.fuelChart, .distanceChart, .supplyChart {
+		width: 90%;
+	}
 }
 
-.gforce {
-	grid-area: section2;
+/********LAPTOP********/
+@media only screen and (min-width: 1000px) {
+	.wrapper {
+		max-width: 1050px;
+		margin: 0 auto;
+	}
+
+	.information {
+		display: grid;
+		grid-gap: 50px;
+		grid-template-columns: repeat(3,1fr);
+		grid-template-rows: repeat(1,1fr);
+		width: 100%;
+		grid-template-areas: 
+		"speed	gforce	passengers";
+	}
+	.speed {
+		grid-area: speed;
+		height: 200px;
+		text-align: center;
+		padding: 20px;
+		padding-top: 40px;
+	}
+
+	.gforce {
+		grid-area: gforce;
+		height: 200px;
+		text-align: center;
+		padding: 20px;
+		padding-top: 40px;
+	}
+
+	.passengers {
+		grid-area: passengers;
+		height: 200px;
+		text-align: center;
+		padding: 20px;
+		padding-top: 40px;
+	}
+
+	.charts {
+		display: grid;
+		grid-template-columns: 1fr 1fr);
+		grid-template-rows: 1fr 1fr);
+		grid-row-gap: 30px;
+		width: 100%;
+		grid-template-areas: 
+		"fuel 		distance"
+		"supply 	supply";
+	}
+
+	.fuelChart{
+		grid-area: fuel;
+		width: 90%;
+	}
+
+	.distanceChart {
+		grid-area: distance;
+		width: 90%;
+	}
+
+	.supplyChart {
+		grid-area: supply;
+		width: 95%;
+	}
 }
 
-.fuelChart {
-	grid-area: chart1;
-}
-
-.distanceChart {
-	grid-area: chart2;
-}
-
-.supplyChart {
-	grid-area: chart3;
+/********DESKTOP********/
+@media only screen and (min-width: 1440px) {
+	.wrapper {
+		max-width: 1200px;
+	}
 }

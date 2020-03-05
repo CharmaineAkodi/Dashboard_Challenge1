@@ -1,145 +1,78 @@
-:root {
-	font-family: 'Arial';
-	font-size: 16px;
+html {
+	box-sizing: border-box;
+}
+*, 
+*:before,
+*:after {
+	box-sizing: inherit;
+	margin: 0 auto;
+	padding: 0;
 }
 
-/***FONTS***/
+/*FONT*/
+h1 {
+	font-family: 'Roboto', Arial, sans-serif;
+}
+
 h3 {
-
+	font-family: 'Roboto', Arial, sans-serif;
 }
-p {
 
+p {
+	font-family: 'Roboto', Arial, sans-serif;
 }
 
 span {
-
+	font-family: 'Roboto', Arial, sans-serif;
 }
 
-/***NAV***/
-.navbar {
+i {
+	font-size: 1em;
+	color: #005288;	
+}
+
+.speedTitle, .gforceTitle, .passengerTitle {
+	font-size: 2.5em;
+	font-weight: 700;
+	color: #1F1F1F;
+}
+
+.speedText, .gforceText, .passengerText {
+	font-size: 3em;
+	color: #005288;
+}
+
+body {
+	background-color: #001624;
+}
+
+.header {
 	border-bottom-right-radius: 10px;
 	border-bottom-left-radius: 10px;
 	box-shadow: 1px 1px 1px 1px #E2E2E2;
-}
-
-.menuItems {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-}
-
-.navLink {
-	display: flex;
-	align-items: center;
-	height: 3rem;
-	text-decoration: none;
-}
-
-.linkText {
-	display: none;
-	color: #111111;
-}
-
-.navItem img {
-	width: 2rem;
-	min-width: 2rem;
-	margin: 0 1.5rem;
-	display: none;
+	background-color: white;
+	padding: 20px;
 }
 
 .spaceLogo {
-	width: 50%;
-	height: 50%;
-	margin-left: -9rem;
-	padding-top: 0.5rem;
+	width: 55%;
+	display: block;
+	margin: auto;
 }
 
-.speed {
+.speed, .gforce, .passengers {
+	background-color: white;
 	box-shadow: 0px 0px 2px 2px #E2E2E2;
 	border-radius: 5px;
-	width: 90%;
-	padding: 3px;
 }
 
-.gforce {
+/*charts*/
+.fuelChart, .distanceChart, .supplyChart {
 	box-shadow: 0px 0px 2px 2px #E2E2E2;
 	border-radius: 5px;
-	width: 90%;
-	padding: 3px;
-}
-/***CHARTS***/
-.fuelChart {
-	box-shadow: 0px 0px 2px 2px #E2E2E2;
-	border-radius: 5px;
-	position: relative; 
-	height: 40vh; 
-	width: 90%;
+	background-color: white;
 }
 
-.distanceChart {
-	box-shadow: 0px 0px 2px 2px #E2E2E2;
-	border-radius: 5px;
-	position: relative; 
-	height: 40vh; 
-	width: 90%;
-}
-.supplyChart {
-	box-shadow: 0px 0px 2px 2px #E2E2E2;
-	border-radius: 5px;
-	position: relative; 
-	height: 40vh; 
-	width: 90%;
-}
-
-
-/***********TABLET*************/
-@media only screen and (min-width: 768px) {
-	.menuItems {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-	.navbar {
-		width: 5rem;
-		height: 100%;
-		position: fixed;
-		background-color: white;
-		border-top-right-radius: 10px;
-		border-bottom-right-radius: 10px;
-		box-shadow: 1px 1px 1px 1px #E2E2E2;
-		transition: width 200ms ease;
-	}
-
-	.navbar:hover {
-		width: 16rem;
-	}
-
-	.navbar:hover .linkText {
-		display: block;
-	}
-
-	main {
-		margin-left: 5rem;
-		padding: 1rem;
-	}
-
-	.navItem img {
-		display: block;
-	}
-}
-
-/***********LAPTOP*************/
-@media only screen and (min-width: 1024px) {
-	
-}
-
-/****************DESKTOP******************/
-@media only screen and (min-width: 1440px) {
-
+canvas {
+	padding: 30px;
 }

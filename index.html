@@ -1,69 +1,57 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="UTF-8">
 		<title>Dashboard SpaceX</title>
 		<link rel="stylesheet" type="text/css" href="styles/main.css">
 		<link rel="stylesheet" type="text/css" href="styles/grid-layout.css">
-		<!--<script type="text/javascript" src="scripts/main.js"></script>-->
+		<link href="//fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet" type="text/css">
+		<link href="//fonts.googleapis.com/css?family=Roboto:500,700" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
 	</head>
-	<body class="grid-container">
 
-		<nav class="grid-item navbar">
-			<ul class="menuItems">
-				<img class="spaceLogo" src="images/spacex.png" />
-				<li class="navItem">
-					<a href="#" class="navLink">
-					<img src="images/home.svg" />
-					<span class="linkText">Home</span>
-					</a>
-				</li>
-				<li class="navItem">
-					<a href="#" class="navLink">
-					<img src="images/battery.svg" />
-					<span class="linkText">Power</span>
-					</a>
-				</li>
-				<li class="navItem">
-					<a href="#" class="navLink">
-					<img src="images/list.svg" />
-					<span class="linkText">Supply</span>
-					</a>
-				</li>
-			</ul>
-		</nav>
+	<body>
+		<header class="grid-item header">
+			<img class="spaceLogo" src="images/spacex.png" />
+		</header>
 		<br>
-		<section>
-			<div class="grid-item speed">
-				<h3>SPEED</h3>
-				<p>28</p>
-			</div>
+		<main class="grid-container wrapper">
+			<section class="grid-container information">
+				<div class="grid-item speed">
+					<h3 class="speedTitle">SPEED</h3>
+					<p class="speedText"><i class="fas fa-tachometer-alt"></i> 28</p>
+				</div>
+			
+				<div class="grid-item gforce">
+					<h3 class="gforceTitle">G-FORCE</h3>
+					<p class="gforceText">75 <i class="fab fa-gofore"></i></p>
+				</div>
+			
+				<div class="grid-item passengers">
+					<h3 class="passengerTitle">PASSENGERS</h3>
+					<p class="passengerText"><i class="fas fa-user"></i> 103</p>
+				</div>
+			</section>
 			<br>
-			<div class="grid-item gforce">
-				<h3>G-FORCE</h3>
-				<p>75G</p>
-			</div>
-		</section>
-		<br>
-		<section class="grid-item charts">
-			<div class="grid-item fuelChart">
-				<canvas id="fuelChart"></canvas>
-				<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-				<script type="text/javascript" src="scripts/charts.js"></script>
-			</div>
-			<br>
-			<div class=" grid-item distanceChart">
-				<canvas id="distanceChart"></canvas>
-				<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-				<script type="text/javascript" src="scripts/charts.js"></script>
-			</div>
-			<br>
-			<div class="grid-item supplyChart">
-  				<canvas id="supplyChart"></canvas>
-				<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-				<script type="text/javascript" src="scripts/charts.js"></script>
-			</div>
-		</section>
+			<section class="grid-container charts">
+				<div class="grid-item fuelChart">
+					<canvas id="fuelChart" width="300" height="400"></canvas>
+					<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+					<script type="text/javascript" src="scripts/charts.js"></script>
+				</div>
+			
+				<div class="grid-item distanceChart">
+					<canvas id="distanceChart" width="300" height="200"></canvas>
+					<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+					<script type="text/javascript" src="scripts/charts.js"></script>
+				</div>
+			
+				<div class="grid-item supplyChart">
+  					<canvas id="supplyChart" width="300" height="400"></canvas>
+					<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+					<script type="text/javascript" src="scripts/charts.js"></script>
+				</div>
+			</section>
+		</main>
 	</body>
 </html>

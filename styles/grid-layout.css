@@ -12,7 +12,7 @@
 	width: 100%;
 	grid-template-areas: 	"speed"	
 							"gforce"	
-							"passengers";*/
+							"passengers"; <-- plaatsing klopt nog steeds niet met deze code*/
 	}
 	.speed {
 		height: 200px;
